@@ -203,9 +203,7 @@ ResponsiveContainer.propTypes = {
 
 const HomepageLayout = () => (
   <ResponsiveContainer>
-    <Router> 
       <LoginForm />
-    </Router>
     
   </ResponsiveContainer>
 

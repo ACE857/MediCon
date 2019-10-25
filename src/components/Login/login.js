@@ -36,15 +36,16 @@ return (
 
           <DropdownExampleSelection lst={list} />  <br />
 
-          <Link to="/dashboard"> 
+        </Segment>
+      </Form>
+      <Link to="/dashboard"> 
           <Button color='teal' fluid size='large'>
             Login
           </Button>
           </Link>
-        </Segment>
-      </Form>
     </Grid.Column>
   </Grid>
+  
 
   </div>
   );
