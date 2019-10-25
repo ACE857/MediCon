@@ -13,7 +13,7 @@ import "./assets/css/pe-icon-7-stroke.css";
 
 import AdminLayout from "./layouts/Admin";
 
-import LoginForm from './components/Login/login';
+import AboutUs from './components/AboutUs/about-us';
 
 function App() {
   return (
@@ -24,7 +24,7 @@ function App() {
         <Router> 
               
               <Switch>
-              <Route exact path="/about-project" component={LoginForm} />
+              <Route exact path="/about-project" component={AboutUs} />
               <Route exact path="/" component={Home} />
               <Route path="/admin" render={props => <AdminLayout {...props} />} />
               <Redirect from="/" to="/admin/dashboard" />
