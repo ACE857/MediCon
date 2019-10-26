@@ -30,7 +30,7 @@ class UserProfile extends Component {
                       ncols={["col-md-5", "col-md-3", "col-md-4"]}
                       properties={[
                         {
-                          label: "Company (disabled)",
+                          label: "ID",
                           type: "text",
                           bsClass: "form-control",
                           placeholder: "Company",
@@ -38,11 +38,11 @@ class UserProfile extends Component {
                           disabled: true
                         },
                         {
-                          label: "Username",
+                          label: "Age and Gender",
                           type: "text",
                           bsClass: "form-control",
                           placeholder: "Username",
-                          defaultValue: "michael23"
+                          defaultValue: "21 Male"
                         },
                         {
                           label: "Email address",
@@ -110,20 +110,6 @@ class UserProfile extends Component {
                       ]}
                     />
 
-                    <Row>
-                      <Col md={12}>
-                        <FormGroup controlId="formControlsTextarea">
-                          <ControlLabel>About Me</ControlLabel>
-                          <FormControl
-                            rows="5"
-                            componentClass="textarea"
-                            bsClass="form-control"
-                            placeholder="Here can be your description"
-                            defaultValue="Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo."
-                          />
-                        </FormGroup>
-                      </Col>
-                    </Row>
                     <Button bsStyle="info" pullRight fill type="submit">
                       Update Profile
                     </Button>
