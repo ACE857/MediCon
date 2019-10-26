@@ -4,24 +4,16 @@ import LoginForm from '../Login/login'
 import {
   Button,
   Container,
-  Divider,
-  Grid,
   Header,
   Icon,
-  Image,
-  List,
   Menu,
   Responsive,
   Segment,
   Sidebar,
   Visibility,
 } from 'semantic-ui-react'
-import DropdownExampleSelection from '../Dropdown/dropdown';
 
 import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
   Link
 } from "react-router-dom";
 

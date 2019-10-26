@@ -1,11 +1,22 @@
 import React, { Component } from "react";
 import { Grid, Row, Col, Table } from "react-bootstrap";
-
+import TableModal from "../components/ModalTable/ModalTable"
 import Card from "../components/Card/Card";
 import { userDataHead, userDataDetails } from "../variables/Variables";
 
+var x = <TableModal />
+
 class TableList extends Component {
+  
+  
+  fetchRowDetail = (prop) => {
+    console.log(prop[0]+" "+x);
+  }
+  
+
+
   render() {
+    
     return (
       <div className="content">
         <Grid fluid>
@@ -19,21 +30,23 @@ class TableList extends Component {
                 ctTableFullWidth
                 ctTableResponsive
                 content={
-                  <Table hover>
+                  <Table striped bordered hover>
                     <thead>
                       <tr>
                         {userDataHead.map((prop, key) => {
                           return <th key={key}>{prop}</th>;
                         })}
+                        <th> View </th>
                       </tr>
                     </thead>
-                    <tbody>
+                    <tbody >
                       {userDataDetails.map((prop, key) => {
                         return (
-                          <tr key={key}>
+                          <tr key={key} onClick={() => { this.fetchRowDetail(prop); }} >
                             {prop.map((prop, key) => {
                               return <td key={key}>{prop}</td>;
                             })}
+                            <td> <TableModal data={prop} /> </td>
                           </tr>
                         );
                       })}
@@ -49,4 +62,11 @@ class TableList extends Component {
   }
 }
 
-export default TableList;
+const App = () => (
+  
+  <TableList> 
+  </TableList>
+);
+
+
+export default App;

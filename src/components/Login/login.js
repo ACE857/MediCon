@@ -1,11 +1,8 @@
 import React, { Component } from 'react'
-import { Button, Form, Grid, Header, Image, Message, Segment } from 'semantic-ui-react'
+import { Button, Form, Grid, Header, Image, Segment } from 'semantic-ui-react'
 import DropdownExampleSelection from '../Dropdown/dropdown';
 
 import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
   Link
 } from "react-router-dom";
 const list = ["Admin", "Hospital","Patient","Pharma"  ];

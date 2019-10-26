@@ -3,6 +3,10 @@ import React from "react";
 
 import CustomCardSlide from "./CustomCardSlide";
 import CustomDotGroup from "./CustomDotGroup";
+import Hospital from "../../assets/img/hospital.png"
+import Patient from "../../assets/img/patient.jpg"
+import Pharma from "../../assets/img/pharma.jpg"
+import Admin from "../../assets/img/admin.jpg"
 
 
 const CardCarousel = () => (
@@ -15,28 +19,28 @@ const CardCarousel = () => (
       <center> 
     <Slider>
       <CustomCardSlide
-        image="https://lorempixel.com/800/800/cats/0"
+        image={Hospital}
         index={0}
-        header="Matthew House"
-        meta="Friend"
+        header="Hospitals"
+        meta="Data Creators"
     />
       <CustomCardSlide
-        image="https://place-hold.it/800x800&text=Matthew&fontsize=32"
+        image={Patient}
         index={1}
-        header="Matthew House"
-        meta="Friend"
+        header="Patients"
+        meta="Data Owners"
       />
       <CustomCardSlide
-        header="Elliot Baker"
-        image="https://place-hold.it/800x800&text=Elliot&fontsize=32"
+        header="Pharma"
+        image={Pharma}
         index={2}
-        meta="Friend"
+        meta="Pharmaceutical Companies"
       />
       <CustomCardSlide
-        header="Steve Sanders"
-        image="https://place-hold.it/800x800&text=Steve&fontsize=32"
+        header="Dev"
+        image={Admin}
         index={3}
-        meta="Friend"
+        meta="Administrators"
       />
     </Slider>
     </center>
