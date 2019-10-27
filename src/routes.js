@@ -4,7 +4,7 @@ import TableList from "./views/TableList.jsx";
 import Typography from "./views/Typography.jsx";
 import Maps from "./views/Maps.jsx";
 import Notifications from "./views/Notifications.jsx";
-import Upgrade from "./views/Upgrade.jsx";
+import AddUser from "./views/AddUser"
 
 const dashboardRoutes = [
   {
@@ -50,11 +50,10 @@ const dashboardRoutes = [
     layout: "/admin"
   },
   {
-    upgrade: true,
-    path: "/upgrade",
-    name: "Connect With Us",
-    icon: "pe-7s-rocket",
-    component: Upgrade,
+    path: "/add-user",
+    name: "Add User",
+    icon: "pe-7s-bell",
+    component: AddUser,
     layout: "/admin"
   }
 ];
