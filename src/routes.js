@@ -67,8 +67,8 @@ const dashboardRoutes = [
     layout: "/admin"
   },
   {
-    path: "/user-data-add",
-    name: "Add Data",
+    path: "/medical-data-add",
+    name: "Medical Data",
     icon: "pe-7s-bell",
     component: AddUserData,
     layout: "/admin"

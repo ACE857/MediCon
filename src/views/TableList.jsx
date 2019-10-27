@@ -14,7 +14,6 @@ class TableList extends Component {
   }
   
 
-
   render() {
     
     return (
