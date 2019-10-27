@@ -11,8 +11,8 @@ import PharmacyEncounters from '../components/NewDataForm/PharmacyEncounters'
 
     const options = [
         { key: 'A', text: 'Medical Encounters', value: 'medical_encounters' },
-        { key: 'B', text: 'Emergency Encounters', value: 'emergency_encounters' },
-        { key: 'C', text: 'Lab Encounters', value: 'lab_encounters' },
+        { key: 'B', text: 'Lab Encounters', value: 'lab_encounters' },
+        { key: 'C', text: 'Emergency Encounters', value: 'emergency_encounters' },
         { key: 'D', text: 'Pharmacy Encounters', value: 'pharmacy_encounters' }
       ]
 

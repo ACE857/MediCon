@@ -3,6 +3,7 @@ import {
     Button,
     Form,
     Input,
+    TextArea,
     Select,
     Container
   } from 'semantic-ui-react'
@@ -12,84 +13,73 @@ class MedicalEncounters extends Component {
     render() {
         
         return (
-            <Container>
+            <Container style={{border: "2px solid pink" }}>
             <h4> Medical Encounters </h4>
             <Form> 
             <Form.Group widths='equal'>
           <Form.Field
             control={Input}
-            label='First name'
-            placeholder='First name'
+            label='Cheif complaint'
+            placeholder='CC'
           />
           <Form.Field
             control={Input}
-            label='Last name'
-            placeholder='Last name'
+            label='Clinic ID'
+            placeholder='Clinic ID'
           />
           
           <Form.Field
             control={Input}
-            label='Last name'
-            placeholder='Last name'
+            label='Encounter Date and Time'
+            placeholder='Encounter Date and Time'
           />
         </Form.Group>
 
         <Form.Group widths='equal'>
           <Form.Field
             control={Input}
-            label='First name'
-            placeholder='First name'
+            label='Encounter Description'
+            placeholder='Encounter Description'
           />
           <Form.Field
             control={Input}
-            label='Last name'
-            placeholder='Last name'
+            label='Specialty'
+            placeholder='Specialty'
           />
           
-          <Form.Field
-            control={Input}
-            label='Last name'
-            placeholder='Last name'
-          />
         </Form.Group>
 
         <Form.Group widths='equal'>
           <Form.Field
             control={Input}
-            label='First name'
-            placeholder='First name'
+            label='Provider Name'
+            placeholder='Provider Name'
           />
           <Form.Field
             control={Input}
-            label='Last name'
-            placeholder='Last name'
+            label='Disposition'
+            placeholder='Disposition'
           />
           
           <Form.Field
             control={Input}
-            label='Last name'
-            placeholder='Last name'
+            label='Provider NPI'
+            placeholder='Provider NPI'
           />
         </Form.Group>
 
-        <Form.Group widths='equal'>
-          <Form.Field
-            control={Input}
-            label='First name'
-            placeholder='First name'
-          />
-          <Form.Field
-            control={Input}
-            label='Last name'
-            placeholder='Last name'
-          />
-          
-          <Form.Field
-            control={Input}
-            label='Last name'
-            placeholder='Last name'
-          />
-        </Form.Group>
+    <Form.Group widths="equal">
+    <Form.Field
+      id='form-textarea-control-opinion'
+      control={TextArea}
+      label='SOAP'
+      placeholder='SOAP Remark'
+    />
+    </Form.Group> 
+
+    <Form.Group widths="equal">
+    <Form.Button >Submit</Form.Button>
+    </Form.Group> 
         </Form>
         </Container> 
         );
