@@ -5,6 +5,8 @@ import Typography from "./views/Typography.jsx";
 import Maps from "./views/Maps.jsx";
 import Notifications from "./views/Notifications.jsx";
 import AddUser from "./views/AddUser"
+import AddHospital from "./views/AddHospital"
+import AddUserData from "./views/AddUserData"
 
 const dashboardRoutes = [
   {
@@ -54,6 +56,21 @@ const dashboardRoutes = [
     name: "Add User",
     icon: "pe-7s-bell",
     component: AddUser,
+    layout: "/admin"
+  },
+
+  {
+    path: "/add-hospital",
+    name: "Add Hospital",
+    icon: "pe-7s-bell",
+    component: AddHospital,
+    layout: "/admin"
+  },
+  {
+    path: "/user-data-add",
+    name: "Add Data",
+    icon: "pe-7s-bell",
+    component: AddUserData,
     layout: "/admin"
   }
 ];
