@@ -3,6 +3,10 @@ import { Grid, Row, Col, Table } from "react-bootstrap";
 import TableModal from "../components/ModalTable/ModalTable"
 import Card from "../components/Card/Card";
 import { userDataHead, userDataDetails } from "../variables/Variables";
+import { medical_ecounter_head, medical_ecounter_details } from "../variables/Variables";
+import { emergency_encounter_head, emergency_encounter_details } from "../variables/Variables";
+import { lab_encounter_head, lab_encounter_details } from "../variables/Variables";
+import { pharma_encounters_head, pharma_encounters_details } from "../variables/Variables";
 
 var x = <TableModal />
 
@@ -45,7 +49,7 @@ class TableList extends Component {
                             {prop.map((prop, key) => {
                               return <td key={key}>{prop}</td>;
                             })}
-                            <td> <TableModal data={prop} /> </td>
+                            <td> <TableModal data={prop}  /> </td>
                           </tr>
                         );
                       })}

@@ -247,7 +247,30 @@ var style = {
 const userDataHead = ["Episode ID", "Cheif Complain", "Encounters", "Disposition", "SOAP_Note"];
 const userDataDetails = [
   ["L8694502508698944760", "mild occasional lightheadedness", "3", "Released Without Limitations", "s:a 33 year old female crystallographer presents with mild spells of vertigo, mild headaches particularly at the back of the head and in the morning x 2 weeks. pt also reports chronic mild occasional lightheadedness. o:Height 160 cm, Weight 53.8 kg, Temperature 37.3 C, Pulse 76, SystolicBP 146, DiastolicBP 93, Respiration 15, Heart = 2/6 systolic murmur at base of heart, Chest = clear to auscultation B/L, no rales or wheezing, Extremities = no edema or clubbing, Heart = normal S1, S2, RRR a:Hypertension p:performed E/M Level 2 (established patient) - Completed, and prescribed Hydrochlorothiazide - 50 mg po qd, and ordered Cholesterol."],
-  ["55223502508698944760", "mild occasional lightheadedness", "3", "Released Without Limitations", "s:a 33 year old female crystallographer presents with mild spells of vertigo, mild headaches particularly at the back of the head and in the morning x 2 weeks. pt also reports chronic mild occasional lightheadedness. o:Height 160 cm, Weight 53.8 kg, Temperature 37.3 C, Pulse 76, SystolicBP 146, DiastolicBP 93, Respiration 15, Heart = 2/6 systolic murmur at base of heart, Chest = clear to auscultation B/L, no rales or wheezing, Extremities = no edema or clubbing, Heart = normal S1, S2, RRR a:Hypertension p:performed E/M Level 2 (established patient) - Completed, and prescribed Hydrochlorothiazide - 50 mg po qd, and ordered Cholesterol."]
+  ["C2819614934032019919", "critical dyspnea", "4", "Released Without Limitations", "s:a 32 year old f presents with critical dyspnea, critical shortness of breath and critical cough. Patient reports that she never drinks alcohol. patient has a one pack per day habit. o:Height 173 cm, Weight 91.1 kg, Temperature 37 C, Pulse 92, SystolicBP 142, DiastolicBP 91, Respiration 14, FEV1 FEV1=35 %, FEV1/FVC FEV1/FVC=60 %, Arterial Blood Gas PaCO2=44 mmHg,PaO2=58 mmHg, plum: accessory muscle use, Heart = RRR, Normal S1/S2, no murmurs, HEENT: WNL, rales Bil a:Chronic Obstructive Pulmonary Disease p:administered OMS 50 - 6 h via nasal cannula (contin), performed FEV1, FEV1/FVC, Arterial Blood Gas, and performed E/M Emergency Services Level 3 - Completed."]
+];
+
+const medical_ecounter_head = ["Episode ID", "Encounter ID", "Date Time", "Description", "Provider ID","Provider Name","Speciality"];
+const medical_ecounter_details = [
+  ["L8694502508698944760", "M5086989447608694502", "2005-10-12T20:33:00Z", "Lacy visited primary care physician on 6/30/2005 2:15:00 PM for ChiefComplain", "663746638","Athena V Morris, MD","FAMILY PRACTICE/PRIMARY CARE"]
+];
+
+const emergency_encounter_head = ["Episode ID", "Encounter ID", "Date Time", "Description", "Provider ID","Provider Name","Speciality"];
+const emergency_encounter_details = [
+  ["L8694502508698944760", "E5086989447608694502", "2005-07-24T14:18:00Z", "Lacy visited emergency care physician for ChiefComplaint", "188105238","Chris Lamb, MD","emergency healthcare"],
+  
+];
+
+const pharma_encounters_head = ["Episode ID", "EncounterID", "Clinic ID", "Date Time", "Description","ProviderID","Provider Name","Pharmacy Name","Drug Name","Units","Dose","Days Of Supply","Prescription"];
+const pharma_encounters_details = [
+  ["L8694502508698944760", "V3046573432409333612", "Corner Drug Store", "2005-07-01T23:44:00Z", "Lacy visited pharmacy on 7/1/2005 6:44:00 PM for OngoingCare","523808810","Shelley A Lawson, RPh","Corner Drug Store","Hydrochlorothiazide","mg","50","90","RX80452720"],
+ 
+];
+
+const lab_encounter_head = ["Episode ID", "EncounterID", "ClinicID", "Date Time", "Description","ProviderID","Provider Name","TestID","Test Name","Units","Result Name","Date Collected","Numeric Result"];
+const lab_encounter_details = [
+  ["L8694502508698944760", "X3228783097331248888", "Wood Diagnostic Labs", "2005-07-05T14:54:00Z", "Lacy visited medical lab on 7/5/2005 9:54:00 AM for OngoingCare","695700114","Aquila F Whitney","050705 CH 76296541","Cholesterol","mg/dL","Cholesterol","2005-07-05T15:54:00Z","250"],
+ 
 ];
 
 
@@ -583,6 +606,14 @@ module.exports = {
   style, // For notifications (App container and Notifications view)
   userDataHead,
   userDataDetails, // For tables (TableList view)
+  medical_ecounter_head,
+  medical_ecounter_details,
+  emergency_encounter_head,
+  emergency_encounter_details,
+  lab_encounter_details,
+  lab_encounter_head,
+  pharma_encounters_details,
+  pharma_encounters_head,
   iconsArray, // For icons (Icons view)
   dataPie,
   legendPie,
