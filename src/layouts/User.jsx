@@ -4,12 +4,12 @@ import NotificationSystem from "react-notification-system";
 
 import AdminNavbar from "../components/Navbars/AdminNavbar";
 import Footer from "../components/Footer/Footer";
-import Sidebar from "../components/Sidebar/Sidebar";
+import Sidebar from "../components/Sidebar/UserSidebar";
 import FixedPlugin from "../components/FixedPlugin/FixedPlugin";
 
 import { style } from "../variables/Variables";
 
-import routes from "../routes"; 
+import routes from "../user-routes"; 
 import image from "../assets/img/sidebar-3.jpg";
 
 class Admin extends Component {
@@ -56,7 +56,7 @@ class Admin extends Component {
   };
   getRoutes = routes => {
     return routes.map((prop, key) => {
-      if (prop.layout === "/admin") {
+      if (prop.layout === "/user") {
         return (
           <Route
             path={prop.layout + prop.path}

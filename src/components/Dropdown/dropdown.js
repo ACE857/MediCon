@@ -1,10 +1,33 @@
 import React, {Component}  from 'react'
 import { Dropdown } from 'semantic-ui-react'
+import Varb from "../../variables/Variables"
+import App from "../../App"
 
 var dropValues = [ ]
 
 
 class DropdownExampleSelection extends Component {
+
+    roleType = (e, {value}) => {
+        console.log(value);
+        
+        if(value == "Admin") {
+            console.log("true")
+            this.props.setAdmin()
+        }
+        if(value == "Hospital") {
+            console.log("true hos")
+            this.props.setHos()
+        }
+        if(value == "Patient") {
+            console.log("true")
+            this.props.setUser()
+        }
+        if(value == "Pharma") {
+            console.log("true")
+            this.props.setPharma()
+        }
+    };
     
     constructor(props) {
         super(props);
@@ -28,6 +51,7 @@ class DropdownExampleSelection extends Component {
             fluid
             selection
             options={dropValues}
+            onChange={ this.roleType }
             />
         );
     }

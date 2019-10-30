@@ -193,12 +193,25 @@ ResponsiveContainer.propTypes = {
   children: PropTypes.node,
 }
 
-const HomepageLayout = () => (
+class HomepageLayout extends Component {
+
+  constructor(props) {
+    super(props);
+    console.log(this.props.hey);
+    
+  }  
+
+  render() {
+return (
+
   <ResponsiveContainer>
-      <LoginForm />
+      <LoginForm  />
     
   </ResponsiveContainer>
 
-)
+);
+  }}
+
+
 
 export default HomepageLayout

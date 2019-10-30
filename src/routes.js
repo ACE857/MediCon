@@ -9,13 +9,7 @@ import AddHospital from "./views/AddHospital"
 import AddUserData from "./views/AddUserData"
 
 const dashboardRoutes = [
-  {
-    path: "/dashboard",
-    name: "Dashboard",
-    icon: "pe-7s-graph",
-    component: Dashboard,
-    layout: "/admin"
-  },
+  
   {
     path: "/user",
     name: "User Profile",
@@ -28,13 +22,6 @@ const dashboardRoutes = [
     name: "Visit History",
     icon: "pe-7s-note2",
     component: TableList,
-    layout: "/admin"
-  },
-  {
-    path: "/typography",
-    name: "Typography",
-    icon: "pe-7s-news-paper",
-    component: Typography,
     layout: "/admin"
   },
   {
@@ -54,7 +41,7 @@ const dashboardRoutes = [
   {
     path: "/add-user",
     name: "Add User",
-    icon: "pe-7s-bell",
+    icon: "pe-7s-users",
     component: AddUser,
     layout: "/admin"
   },
@@ -62,15 +49,21 @@ const dashboardRoutes = [
   {
     path: "/add-hospital",
     name: "Add Hospital",
-    icon: "pe-7s-bell",
+    icon: "pe-7s-shield",
     component: AddHospital,
     layout: "/admin"
   },
   {
     path: "/medical-data-add",
     name: "Medical Data",
-    icon: "pe-7s-bell",
+    icon: "pe-7s-diamond",
     component: AddUserData,
+    layout: "/admin"
+  },{
+    path: "/dashboard",
+    name: "Dashboard",
+    icon: "pe-7s-graph",
+    component: Dashboard,
     layout: "/admin"
   }
 ];

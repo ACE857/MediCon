@@ -6,18 +6,20 @@ import {
   GoogleMap,
   Marker
 } from "react-google-maps";
+import HeatmapLayer from "react-google-maps/lib/components/visualization/HeatmapLayer";
 
 const CustomMap = withScriptjs(
   withGoogleMap(props => (
     <GoogleMap
       defaultZoom={13}
-      defaultCenter={{ lat: 40.748817, lng: -73.985428 }}
+      defaultCenter={{ lat: 37.774546, lng: -122.433523 }}
       defaultOptions={{
         scrollwheel: false,
         zoomControl: true
       }}
     >
-      <Marker position={{ lat: 40.748817, lng: -73.985428 }} />
+      
+      <Marker position={{ lat: 37.774546, lng: -122.433523 }} />
     </GoogleMap>
   ))
 );

@@ -6,8 +6,33 @@ import {
   Link
 } from "react-router-dom";
 const list = ["Admin", "Hospital","Patient","Pharma"  ];
-
+var fwd = ""
 class LoginForm extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      user : false,
+      admin : false,
+      pharma : false,
+      hos : false
+    }
+  }
+
+  setAdmin = ()=>{
+    this.setState({admin:true, user:false, hos : false, pharma: false});
+  }
+  setUser = ()=>{
+    this.setState({admin:false, user:true, hos : false, pharma: false});
+  }
+  setHos = ()=>{
+    this.setState({admin:false, user:false, hos : true, pharma: false});
+  }
+  setPharma = ()=>{
+    console.log("setting pharma");
+    
+    this.setState({admin:false, user:false, hos : false, pharma: true});
+  }
 
   render() {
 return (
@@ -31,15 +56,40 @@ return (
             
           />
 
-          <DropdownExampleSelection lst={list} />  <br />
+          <DropdownExampleSelection lst={list} setAdmin={this.setAdmin} setPharma={this.setPharma} setUser={this.setUser} setHos={this.setHos} />  <br />
 
         </Segment>
       </Form>
-      <Link to="/dashboard"> 
+      {
+      this.state.admin &&
+      <Link to="/user-admin"> 
           <Button color='teal' fluid size='large'>
-            Login
+            Login as Admin
           </Button>
-          </Link>
+          </Link>}
+          {
+      this.state.user &&
+      <Link to="/user-patient"> 
+          <Button color='teal' fluid size='large'>
+            Login as Patient
+          </Button>
+          </Link>}
+
+          {
+      this.state.hos &&
+      <Link to="/user-hos"> 
+          <Button color='teal' fluid size='large'>
+            Login as Hospital
+          </Button>
+          </Link>}
+
+          {
+      this.state.pharma &&
+      <Link to="/user-pharma"> 
+          <Button color='teal' fluid size='large'>
+            Login as Pharma
+          </Button>
+          </Link>}
     </Grid.Column>
   </Grid>
   

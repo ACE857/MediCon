@@ -9,6 +9,7 @@ import { Card } from "../components/Card/Card";
 import { FormInputs } from "../components/FormInputs/FormInputs";
 import { UserCard } from "../components/UserCard/UserCard";
 import Button from "../components/CustomButton/CustomButton";
+import ProfilePic from "../assets/img/profilepic.png"
 
 import avatar from "../assets/img/faces/face-3.jpg";
 
@@ -30,8 +31,8 @@ class UserProfile extends Component {
                           label: "ID",
                           type: "text",
                           bsClass: "form-control",
-                          placeholder: "Company",
-                          defaultValue: "Creative Code Inc.",
+                          placeholder: "User ID ",
+                          defaultValue: "1632452",
                           disabled: true
                         },
                         {
@@ -57,14 +58,14 @@ class UserProfile extends Component {
                           type: "text",
                           bsClass: "form-control",
                           placeholder: "First name",
-                          defaultValue: "Mike"
+                          defaultValue: ""
                         },
                         {
                           label: "Last name",
                           type: "text",
                           bsClass: "form-control",
                           placeholder: "Last name",
-                          defaultValue: "Andrew"
+                          defaultValue: ""
                         }
                       ]}
                     />
@@ -77,7 +78,7 @@ class UserProfile extends Component {
                           bsClass: "form-control",
                           placeholder: "Home Adress",
                           defaultValue:
-                            "Bld Mihail Kogalniceanu, nr. 8 Bl 1, Sc 1, Ap 09"
+                            "Army Institute Of Technology Pune"
                         }
                       ]}
                     />
@@ -89,14 +90,14 @@ class UserProfile extends Component {
                           type: "text",
                           bsClass: "form-control",
                           placeholder: "City",
-                          defaultValue: "Mike"
+                          defaultValue: "PUNE"
                         },
                         {
                           label: "Country",
                           type: "text",
                           bsClass: "form-control",
                           placeholder: "Country",
-                          defaultValue: "Andrew"
+                          defaultValue: "INDIA"
                         },
                         {
                           label: "Postal Code",
@@ -118,16 +119,18 @@ class UserProfile extends Component {
             <Col md={4}>
               <UserCard
                 bgImage="https://ununsplash.imgix.net/photo-1431578500526-4d9613015464?fit=crop&fm=jpg&h=300&q=75&w=400"
-                avatar={avatar}
-                name="Mike Andrew"
-                userName="michael24"
+                avatar={ProfilePic}
+                name="Team Members"
+                userName="astroids"
                 description={
                   <span>
-                    "Lamborghini Mercy
+                    Suraj Bisht
                     <br />
-                    Your chick she so thirsty
+                    Anuj Singh
                     <br />
-                    I'm in that two seat Lambo"
+                    Amit Kumar
+                    <br />
+                    Sharad Bisht
                   </span>
                 }
                 socials={
@@ -145,8 +148,13 @@ class UserProfile extends Component {
                 }
               />
             </Col>
+
+            <center> <button class="ui primary button">Share My Medical Records</button></center>
           </Row>
+
         </Grid>
+       
+
       </div>
     );
   }
